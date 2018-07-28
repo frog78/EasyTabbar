@@ -10,8 +10,6 @@
 #import "Macro.h"
 #import "UIView+Frame.h"
 
-
-
 @interface EasyTabBar () {
     
     /** 当前选中的标签页 */
@@ -34,7 +32,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self analyzeConfig];
     [self loadTabBarView];
 }
@@ -66,7 +63,6 @@
     
     [self loadTabBarBackground];
     [self loadTabBarItems];
-    
 }
 
 
@@ -146,7 +142,6 @@
         iconView.image = [UIImage imageNamed:icon[@"icon_unsel"]];
         iconView.tag = i;
         [self.view addSubview:iconView];
-        
         
         NSDictionary *title = itemDic[@"title"];
         NSNumber *title_y = title[@"title_y"];

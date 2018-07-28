@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self initTabBar];
 }
 
@@ -41,7 +40,6 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     NSUInteger index = [tabBar.items indexOfObject:item];
-    
     NSLog(@"CurrentIndex:%lu", (unsigned long)index);
     [_tabBar setTabbarSelectIndex:(int)index];
 }

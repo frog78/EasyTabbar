@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Mine</key>
+	<dict>
+		<key>Mine</key>
+		<string>MineViewController</string>
+	</dict>
+	<key>Main</key>
+	<dict>
+		<key>Router</key>
+		<string>ViewController</string>
+		<key>Main</key>
+		<string>MainViewController</string>
+		<key>Login</key>
+		<string>LoginViewController</string>
+	</dict>
+</dict>
+</plist>

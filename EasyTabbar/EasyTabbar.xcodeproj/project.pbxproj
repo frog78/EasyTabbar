@@ -23,6 +23,11 @@
 		786244FD210C50B20060ADD2 /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786244F5210C50B20060ADD2 /* ServiceViewController.m */; };
 		786244FE210C50B20060ADD2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 786244F8210C50B20060ADD2 /* MainViewController.m */; };
 		78624500210C50E80060ADD2 /* tabconfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 786244FF210C50E80060ADD2 /* tabconfig.plist */; };
+		7862450A210C55AB0060ADD2 /* NSObject+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 78624503210C55AB0060ADD2 /* NSObject+Router.m */; };
+		7862450B210C55AB0060ADD2 /* UIViewController+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 78624504210C55AB0060ADD2 /* UIViewController+Router.m */; };
+		7862450C210C55AB0060ADD2 /* protocol.txt in Resources */ = {isa = PBXBuildFile; fileRef = 78624505210C55AB0060ADD2 /* protocol.txt */; };
+		7862450D210C55AB0060ADD2 /* Module.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78624506210C55AB0060ADD2 /* Module.plist */; };
+		7862450E210C55AB0060ADD2 /* ModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78624507210C55AB0060ADD2 /* ModuleManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,14 @@
 		786244F8210C50B20060ADD2 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		786244F9210C50B20060ADD2 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		786244FF210C50E80060ADD2 /* tabconfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tabconfig.plist; sourceTree = "<group>"; };
+		78624502210C55AB0060ADD2 /* ModuleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleManager.h; sourceTree = "<group>"; };
+		78624503210C55AB0060ADD2 /* NSObject+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Router.m"; sourceTree = "<group>"; };
+		78624504210C55AB0060ADD2 /* UIViewController+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Router.m"; sourceTree = "<group>"; };
+		78624505210C55AB0060ADD2 /* protocol.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = protocol.txt; sourceTree = "<group>"; };
+		78624506210C55AB0060ADD2 /* Module.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Module.plist; sourceTree = "<group>"; };
+		78624507210C55AB0060ADD2 /* ModuleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleManager.m; sourceTree = "<group>"; };
+		78624508210C55AB0060ADD2 /* UIViewController+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Router.h"; sourceTree = "<group>"; };
+		78624509210C55AB0060ADD2 /* NSObject+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Router.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +121,7 @@
 		786244BA210C46AA0060ADD2 /* EasyTabbar */ = {
 			isa = PBXGroup;
 			children = (
+				78624501210C55AB0060ADD2 /* PageRouter */,
 				786244EA210C50B20060ADD2 /* Sections */,
 				786244DF210C4F1F0060ADD2 /* TabBar */,
 				786244BB210C46AA0060ADD2 /* AppDelegate.h */,
@@ -204,6 +218,21 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		78624501210C55AB0060ADD2 /* PageRouter */ = {
+			isa = PBXGroup;
+			children = (
+				78624502210C55AB0060ADD2 /* ModuleManager.h */,
+				78624507210C55AB0060ADD2 /* ModuleManager.m */,
+				78624509210C55AB0060ADD2 /* NSObject+Router.h */,
+				78624503210C55AB0060ADD2 /* NSObject+Router.m */,
+				78624508210C55AB0060ADD2 /* UIViewController+Router.h */,
+				78624504210C55AB0060ADD2 /* UIViewController+Router.m */,
+				78624505210C55AB0060ADD2 /* protocol.txt */,
+				78624506210C55AB0060ADD2 /* Module.plist */,
+			);
+			path = PageRouter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,9 +313,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7862450C210C55AB0060ADD2 /* protocol.txt in Resources */,
 				786244C8210C46AB0060ADD2 /* LaunchScreen.storyboard in Resources */,
 				786244C5210C46AB0060ADD2 /* Assets.xcassets in Resources */,
 				78624500210C50E80060ADD2 /* tabconfig.plist in Resources */,
+				7862450D210C55AB0060ADD2 /* Module.plist in Resources */,
 				786244C3210C46AA0060ADD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +343,10 @@
 				786244FC210C50B20060ADD2 /* MineViewController.m in Sources */,
 				786244CB210C46AB0060ADD2 /* main.m in Sources */,
 				786244E5210C4F1F0060ADD2 /* EasyTabBarController.m in Sources */,
+				7862450E210C55AB0060ADD2 /* ModuleManager.m in Sources */,
 				786244FB210C50B20060ADD2 /* VoiceViewController.m in Sources */,
+				7862450B210C55AB0060ADD2 /* UIViewController+Router.m in Sources */,
+				7862450A210C55AB0060ADD2 /* NSObject+Router.m in Sources */,
 				786244BD210C46AA0060ADD2 /* AppDelegate.m in Sources */,
 				786244FD210C50B20060ADD2 /* ServiceViewController.m in Sources */,
 				786244E4210C4F1F0060ADD2 /* EasyTabBar.m in Sources */,

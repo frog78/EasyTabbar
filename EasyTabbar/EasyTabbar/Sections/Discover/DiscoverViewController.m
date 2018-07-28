@@ -7,7 +7,12 @@
 
 #import "DiscoverViewController.h"
 
-@interface DiscoverViewController ()
+
+@interface DiscoverViewController (){
+    
+    UIWebView *webView;
+    
+}
 
 @end
 
@@ -15,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor whiteColor];
+    webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 45)];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+    [self.view addSubview:webView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

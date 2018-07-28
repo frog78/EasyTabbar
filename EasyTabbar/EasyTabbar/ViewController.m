@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://baidu.com"]]];
+    [self.view addSubview:webView];
 }
 
 

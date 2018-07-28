@@ -6,12 +6,10 @@
 //
 
 #import "MainViewController.h"
+#import "UIView+Frame.h"
+#import "UIViewController+Router.h"
 
-@interface MainViewController () {
-    
-    UIWebView *webView;
-    
-}
+@interface MainViewController () 
 
 @end
 
@@ -19,12 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 45)];
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
-    [self.view addSubview:webView];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
+    [btn setTitle:@"PageRouter" forState:0];
+    btn.backgroundColor = [UIColor grayColor];
+    btn.centerX = self.view.centerX;
+    btn.centerY = self.view.centerY;
+    [btn addTarget:self action:@selector(routerClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
+- (void)routerClick {
+    [self.parentViewController.navigationController openURL:@"EasyTabbar://Main/Router"];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     self.parentViewController.navigationItem.title = @"首页";

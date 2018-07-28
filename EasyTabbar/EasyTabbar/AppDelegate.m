@@ -22,7 +22,7 @@
     EasyTabBarController *tabCtl = [[EasyTabBarController alloc] init];
     UINavigationController *navCtl = [[UINavigationController alloc] initWithRootViewController:tabCtl];
     //    [navCtl setNavigationBarHidden:YES];
-    self.window.rootViewController = tabCtl;
+    self.window.rootViewController = navCtl;
     [self.window makeKeyAndVisible];
     return YES;
 }
